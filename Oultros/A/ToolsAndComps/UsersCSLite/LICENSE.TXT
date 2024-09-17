@@ -1,0 +1,62 @@
+Terms of use of the TUsersCSLite
+--------------------------------
+
+TUsersCSLite Security Component for Delphi
+Copyright (C) 1999 - 2002, Tools&Comps
+All Rights Reserved
+web site: http://www.toolsandcomps.com
+  e-mail: info@toolsandcomps.com
+
+OBS: Read carefully the follow terms and conditions before using this software.
+
+
+TUsersCSLite Freeware
+---------------------
+
+TUsersCSLite is a freeware version of our security component TUsersCS. TUsersCSLite is based is a old version of the component (v1.2) which only protect menu items, but is still very usefull for several situations.
+
+This version does not includes sources, but they are available for only USD 89.00 (Developer License), if you need it. Please visit our site for information on registration to obtain the sources for TUsersCSLite.
+
+Rights of use
+-------------
+
+Tools&Comps grants you the rights to use TUsersCSLite in freeware as well in comercial applications. 
+
+It means that you can distribute your compiled applications with the component TUsersCSLite without paying us any fee. You can also obtain profit in the sales of applications which are using the TUsersCSLite.
+
+Who CAN'T use TUsersCSLite
+---------------------------
+
+The component TUsersCSLite in its freeware form, can't be used by any institution, entity or organization that is part or has any kind of link with the government of any country, in any kind of level (federal, state or municipal) that could exists, even if not cited in this document, or that can be created. In order to use the components, is necessary to adquiry licenses.
+
+Distribution Rights
+-------------------
+
+Tools&Comps grants you the rights to distribute the component TUsersCSLite from a web site, promotional CDs, e-maios and other kinds of distributions that can exists or that can be created, since that you don't make any profit in the distribution on the midia where TUsersCSLite is stored. If you will obtain profits, you need to request us the authorization.
+
+Tools&Comps grants you the rights to distribute the component TUsersCSLite, since that any file of in the package of TUsersCSLite be modified without.
+
+Ownership of the TUsersCSLite
+-----------------------------
+
+The TUsersCSLite freeware license grants you the right to use the software, but Tools&Comps remains the owner of the software and all the files in this package.
+
+By using the software TUsersCSLite in your applications, you agree that you can't create other software based on TUsersCSLite which will compite direct or indirectly with TUsersCS or other security components from Tools&Comps
+
+Responsabilities
+----------------
+
+Tools&Comps can not be resposible for eventual losses or damages (directs or indirects), 
+casuals or consequents, but not limited to: interruptions or cease of profits in your financial 
+activities, losses or damages in phisical dispositivies where the software it's been stored, 
+phisical problems, personal problems, among others, because of the incorrect use of this 
+software or any files that take part of it.
+
+Tools&Comps can guarantee that this software (TUsersCSLite) works just in the enviroments 
+that the product Borland Delphi and your agregated softwares works.
+
+Any changes that you make in the source code (if provided in the package) are of your own
+responsability. 
+
+If this terms are not aceptables by you, so please, uninstall this software from your computer(s) 
+immediately and permanently.

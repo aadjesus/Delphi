@@ -1,0 +1,43 @@
+; This file is maintained by WHD. Do not modify this file directly.
+;
+; This help project was created with Windows Help Designer V 2.1.5.3
+; *** UNREGISTERED ***
+; Windows Help Designer is copyright (C) 1996, 1997, by Nick Ameladiotis
+; Visit http://www.devgr.com for more informations
+;
+[OPTIONS]
+REPORT=Yes
+ERRORLOG=C:\My Documents\IMTChat\Help\Help.LOG
+LCID=0x409
+COPYRIGHT=IMTSoftware'99
+TITLE=IMT Chatting Program Help File
+
+[WINDOWS]
+main="", , 0,(255,255,225),(192,192,192),0  ; 
+
+[Config]
+Next()
+Back()
+Prev()
+
+[FILES]
+Help.RTF
+
+[MAP]
+Topic1=0x1
+Anggota=0x3
+Topic5=0x5
+Topic6=0x6
+Topic8=0x8
+Topic9=0x9
+Topic10=0xA
+Topic11=0xB
+Topic12=0xC
+Save_CHat=0xD
+Topic14=0xE
+Topic15=0xF
+Topic18=0x12
+Client_Part=0x13
+Topic21=0x15
+Topic23=0x17
+Topic24=0x18

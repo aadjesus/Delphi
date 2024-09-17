@@ -1,0 +1,10 @@
+Try
+  { Limpa do controle de acesso }
+  dm.LimpaAcessoPorEstacao;
+  { Desconecta o banco de dados }
+  dm.DbBgm.Connected := False;
+  { Altera a cor do Edit na sua entrada }
+  Screen.OnActiveControlChange := Nil;
+Except
+  Application.Terminate ;
+End

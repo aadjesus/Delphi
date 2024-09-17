@@ -1,0 +1,12 @@
+{$DEFINE CONTRICMS} // ContribuinteIcms no Cadastro de Cliente
+{$DEFINE BCOTDR} // Tipos de despesa e receita na movimentação bancária
+{$DEFINE SequenceCTB} // Utilização de sequences para os lançamentos
+{$DEFINE SequenceLOG} // Utilização de sequences para os LOGs
+{$DEFINE SequenceBCO} // Utilização de sequences para as movimentações
+{$DEFINE Cores} // Muda cor conforme escolhida na tela.
+{$DEFINE ChronosAurea} // Para ver se some o erro WIN32.DLL / CHRON32.DLL
+//{$DEFINE UsaDireitosNosHints} // Silvio
+{$DEFINE Adiantamento} //Adiantamento a fornecedores
+{$DEFINE Devolucao} //Devolução a fornecedores
+//{$DEFINE Fase2R} //Fase 2 da Reunidas
+{$DEFINE EmDesenvolvimento}

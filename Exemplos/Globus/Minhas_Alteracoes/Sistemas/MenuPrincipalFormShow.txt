@@ -1,0 +1,38 @@
+  FazPerguntaAoSair := True;
+  vRetorno1 := '';
+  vRetorno2 := '';
+
+  Try
+    { Abre o banco e seta as variaveis }
+    If Not dm.AbreDataBase Then
+    Begin
+      FazPerguntaAoSair := False;
+      Close;
+      Exit;
+    End;
+  Except on E:EDBEngineError do
+    Begin
+      MensagemDLG( MostraErrosQuery(E,False), mtErro, mbOK ) ;
+      Application.Terminate ;
+      Exit ;
+    End ;
+  End ; // Try - Except
+
+  { Faz a tradução da tela }
+  If vcFazTraducaoDeInterface Then
+    For i := 0 To ComponentCount - 1 Do TraduzInterface(Components[i]);
+
+  { Altera a cor do Edit na sua entrada }
+  Screen.OnActiveControlChange := dm.MudaCor;
+
+  { Define os tamanhos dos painéis. O painel 1 é ajustado dinamicamente (MenuPrincipalStatusBar.txt) }
+  BarraDeEstatus.Panels[0].Width := 40;
+  BarraDeEstatus.Panels[0].Text := 'Msg:';
+  BarraDeEstatus.Panels[2].Width := 200;
+  BarraDeEstatus.Panels[3].Width := 150;
+
+  vPrimeiraVez := True;
+  { Define o evento do timer, para o caso de ter sido perdido por causa de CTRL+SHIFT+C no menu principal }
+//  Timer1.OnTimer := Timer1Timer; { Comentado para usar o Evento que faz validação da Agenda }
+    Timer1.OnTimer := Timer1TimerExtend;
+

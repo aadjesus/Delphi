@@ -1,0 +1,28 @@
+With ContSenhaBgm.vMDTeclas do
+Begin
+  Try
+    Begin
+      If (Not IsEmpty) And
+         (Key In [48..57,65..90,97..122]) And // 0..9,A..Z,a..z
+         (((Shift = [ssCtrl])  And (Locate('TECLAS','Ctrl+'  + Chr(Key),[]))) Or
+          ((Shift = [ssShift]) And (Locate('TECLAS','Shift+' + Chr(Key),[])))) Then
+//         (((Shift = [ssCtrl])  And (Locate('TECLAS','Ctrl+'  + Chr(Key),[LocaseInsensitive]))) Or
+//          ((Shift = [ssShift]) And (Locate('TECLAS','Shift+' + Chr(Key),[LocaseInsensitive])))) Then
+
+      Begin
+        If Length(Trim(FieldByName('INDICEMENU').AsString)) = 4 Then
+          MainMenu1.Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,1,2))]
+                   .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,3,2))]
+                   .Click
+        Else
+        If Length(Trim(FieldByName('INDICEMENU').AsString)) = 6 Then
+          MainMenu1.Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,1,2))]
+                   .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,3,2))]
+                   .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,5,2))]
+                   .Click ;
+      End ; // If (Not IsEmpty) And (...
+    End ;
+  Except
+  End ; // Try - Except
+End ; // With ContSenhaBgm.vMDTeclas do
+

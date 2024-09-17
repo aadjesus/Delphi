@@ -1,0 +1,2 @@
+// Substituir a declaração da uses Global por este include
+Global, Global_Ale,

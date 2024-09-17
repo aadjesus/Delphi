@@ -1,0 +1,47 @@
+package ucs_lite;
+
+{$R *.res}
+{$R 'UsersCSLite.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'TUsersCSLite Security Component'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  vclx,
+  vcldb,
+  bdertl;
+
+contains
+  UsersCSRes in 'UsersCSRes.pas',
+  LoginCS in 'LoginCS.pas',
+  NewProfCS in 'NewProfCS.pas',
+  NewUserCS in 'NewUserCS.pas',
+  ChngPwdCS in 'ChngPwdCS.pas',
+  dmUsersCS in 'dmUsersCS.pas',
+  UsersAdmCS in 'UsersAdmCS.pas',
+  UsersCSLite in 'UsersCSLite.pas',
+  u_crypto in 'u_crypto.pas';
+
+end.

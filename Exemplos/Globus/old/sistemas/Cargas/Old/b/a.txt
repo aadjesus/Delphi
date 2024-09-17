@@ -1,0 +1,14 @@
+ O volume na unidade C nÆo tem nome.
+ O n£mero de s‚rie do volume ‚ B0C0-40A7
+
+ Pasta de C:\Globus\Sistemas\Cargas\Old\b
+
+13/11/2007  14:55            64.216 CGSContBaixaDoctos.pas
+18/10/2007  09:58             9.698 CGSContCadastroDocMovimentacao.pas
+20/08/2007  11:51            22.507 CGSContCadastroTrocaFormulario.pas
+28/08/2007  14:50            22.507 CGSContControleDeFormularios.pas
+22/10/2007  15:38               709 CGSContDocumentosImprimir.pas
+13/11/2007  14:13           154.110 CgsContPedidoDeCliente.pas
+13/11/2007  14:32           138.198 CGSContProgramacaoDeContainer.pas
+               7 arquivo(s)        411.945 bytes
+               0 pasta(s) 24.446.926.848 bytes dispon¡veis

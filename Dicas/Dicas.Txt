@@ -1,0 +1,32 @@
+1º Para focar um item selecionado de um radio group.
+
+   TRadioGroup(RGoupStatus.Controls[RGoupStatus.ItemIndex]).SetFocus ;
+--------------------------------------------------------------------------------
+2º Salva o texto do SQl detro do pasta do sistema	
+
+   Sql.SaveToFile(ExtractFilePath(Application.Exename)+'RELATORIO.SQL');
+
+--------------------------------------------------------------------------------
+3º Criar arquivos de recursos
+
+   Exp "Arq.rc"
+      NomeDoRecurso1 TipoDoRecurso2 NomeDoarquivo3   
+      NomeDoRecurso1 TipoDoRecurso2 NomeDoarquivo3    
+      NomeDoRecurso1 TipoDoRecurso2 NomeDoarquivo3
+
+      Musica WAVE   'C:\TEMP\Musica.wav'   
+      Video  AVI    'C:\TEMP\Video.avi'   
+      Mp3    RCData 'C:\TEMP\Mp3.Mp3'   
+     
+   Compilar arq : 
+     brcc32 arq.rc (Será criado o arquivo arq.res no mesmo diretorio)
+
+   Inc no pas.
+     {$R arq.res}
+--------------------------------------------------------------------------------
+4º Quarda a posicao de um registro
+
+bmLocalImportante : TBookmark; 
+bmLocalImportante := table.GetBookMark; 
+table1.GotoBookMark(bmLocalImportante); 
+table1.FreeBookMark(bmLocalImportante); 

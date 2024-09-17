@@ -1,0 +1,72 @@
+* NewUserMainForm                   	Novo Usuário
+* NewUser_lblUSER_NAME                    USER_NAME
+* NewUser_lblREAL_NAME                   	REAL_NAME
+* NewUser_lblPASSWORD                   	PASSWORD
+* NewUser_lblEXPIRATION_DATE              EXPIRATION_DATE
+* NewUser_lblPROFILE                   	PROFILE
+* NewUser_cbxUSER_EXPIRE                  USER_EXPIRE
+* NewUser_cbxUSER_ACTIVE                  USER_ACTIVE
+* NewUser_OKBtn                   	OK
+* NewUser_CancelBtn                   	Cancelar
+
+
+* NewProfileMainForm                   Novo Perfil
+* NewProfile_lblPROF_DESCRIPTION       PROF_DESCRIPTION
+NewProfile_lblINTERVAL_CHANGE_PWD    INTERVAL_CHANGE_PWD
+NewProfile_OKBtn                     OK
+NewProfile_CancelBtn                 Cancelar
+NewProfile_cbxMUST_CHANGE_PWD        MUST_CHANGE_PWD
+NewProfile_rgpHIDE_DISABLE_MENU       HIDE_DISABLE_MENU
+NewProfile_rgpHIDE_MENU 	      Items de menu invisiveis
+NewProfile_rgpDISABLE_MENU            Items de menu Desabilitados
+
+
+* UsersAdministrationMainForm                    Administração de Usuários
+* UsersAdministration_tsUsers                    Usuários
+* UsersAdministration_tsUsersList                Lista de Usuários
+* UsersAdministration_DBGridUsersColUSER_NAME                   USER_NAME
+* UsersAdministration_DBGridUsersColREAL_NAME                   REAL_NAME
+* UsersAdministration_DBGridUsersColPROFILE                   PROFILE
+* UsersAdministration_DBGridUsersColUSER_ACTIVE                   USER_ACTIVE
+* UsersAdministration_tsUsersData                   Dados do Usuário
+* UsersAdministration_lblLAST_PWD_CHANGE            LAST_PWD_CHANGE
+* UsersAdministration_lblUSER_NAME                  USER_NAME
+* UsersAdministration_lblREAL_NAME                  REAL_NAME
+* UsersAdministration_lblPASSWORD                   PASSWORD
+* UsersAdministration_lblEXPIRATION_DATE            EXPIRATION_DATE
+* UsersAdministration_lblPROFILE                    PROFILE
+* UsersAdministration_cbxUSER_EXPIRE                USER_EXPIRE
+* UsersAdministration_cbxUSER_ACTIVE                USER_ACTIVE
+* UsersAdministration_btnChangePassword              &Mudar Senha
+* UsersAdministration_PanelPwdHistory                    Histórico de Senhas
+* UsersAdministration_DBGridPwdHistoryColPASSWORD                   PASSWORD
+* UsersAdministration_DBGridPwdHistoryColCHANGE_DATE                   CHANGE_DATE
+* UsersAdministration_sbNewUser                   Novo Usuário*
+* UsersAdministration_sbUserAccess                        Acessos    
+* UsersAdministration_sbChangeUserData                   Mudar Dados
+* UsersAdministration_sbDeleteUser                   Eliminar Usuário
+* UsersAdministration_tsProfiles                   Perfis de Usuário
+* UsersAdministration_tsProfilesList                   Lista de Perfis
+* UsersAdministration_DBGridProfilesColPROF_DESCRIPTION                   PROF_DESCRIPTION
+* UsersAdministration_DBGridProfilesColMUST_CHANGE_PWD                   MUST_CHANGE_PWD
+* UsersAdministration_DBGridProfilesColINTERVAL_CHANGE_PWD               INTERVAL_CHANGE_PWD
+* UsersAdministration_DBGridProfilesColHIDE_DISABLE_MENU                   HIDE_DISABLE_MENU
+* UsersAdministration_tsProfilesData                   Dados do Perfil
+* UsersAdministration_lblPROF_DESCRIPTION                   PROF_DESCRIPTION
+* UsersAdministration_lblINTERVAL_CHANGE_PWD                   INTERVAL_CHANGE_PWD
+* UsersAdministration_cbxMUST_CHANGE_PWD                   MUST_CHANGE_PWD
+* UsersAdministration_rgpHIDE_DISABLE_MENU                   HIDE_DISABLE_MENU
+* UsersAdministration_sbNewProfile                   Novo Perfil
+* UsersAdministration_sbProfileAccess                        Acessos    
+* UsersAdministration_sbChangeProfileData                   Mudar Dados
+* UsersAdministration_sbDeleteProfile                   Eliminar Perfil
+* UsersAdministration_tsPrograms                   Controle de Acesso aos Programas
+* UsersAdministration_tsUsersProgs                   Usuários
+* UsersAdministration_DBGridUsersProgsColUSER_NAME                   USER_NAME
+* UsersAdministration_DBGridUsersProgsColPROFILE                   PROFILE
+* UsersAdministration_tsProfilesProgs                   Perfis de Usuário
+* UsersAdministration_DBGridProfilesProgsColPROF_DESCRIPTION                   PROF_DESCRIPTION
+* UsersAdministration_sbApply                   Aplicar
+* UsersAdministration_sbRestore                   Restaurar
+* UsersAdministration_sbRestoreProfile                   Restaurar do Perfil
+* UsersAdministration_PanelAboveProgs                    Acessos para o usuário XXXXXXXXXXXXXXX

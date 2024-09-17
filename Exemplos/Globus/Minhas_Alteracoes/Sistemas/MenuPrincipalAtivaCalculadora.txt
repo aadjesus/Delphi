@@ -1,0 +1,103 @@
+{$Include \Globus\sistemas\Defines.txt}
+  ContSenhaBgm.vCodCliente := vCodigoCliente;
+  If Msg.Message = WM_KEYDOWN Then
+  Begin
+    If Msg.wParam = VK_F3 Then
+      WinExec('Calc.exe',Sw_ShowNormal);
+    If (Msg.wParam = VK_F4) And (frmMenuPrincipal.Focused) Then
+    Begin
+      ContSenhaBgm.DesabilitaMenus;
+      ContSenhaBgm.LimpaUsuario;
+      ContSenhaBgm.Visible := True;
+      ContSenhaBgm.SetFocus;
+      If ContSenhaBgm.Usuario <> '' Then
+        GravaLog(ContSenhaBgm.Sistema, ContSenhaBgm.Usuario,
+                 Now, 'Pediu nova senha em: ' + WinLogin + '/' + TrazNomeDoComputador + '.');
+    End;
+    vTAB := (Msg.wParam = VK_TAB);
+
+    If vcUsuarioManagerComSenhaUm Then
+    Begin
+      If GetKeyState(VK_SCROLL) < 0 Then // Quando a tecla Scroll Look estiver precionada
+        Case Msg.wParam of
+          VK_F12 : vcCodigoCliente := StrToInt(InputBox('Código cliente','Novo código', IntToStr(vcCodigoCliente))) ;
+          VK_F11 : vcArquivoRastreioSQLTela := InputBox('Informe o arquivo','Arquivo', IIf(vcArquivoRastreioSQLTela='',ExtractFilePath(Application.ExeName) + 'LogGetSlq.Txt',vcArquivoRastreioSQLTela) ) ;
+          VK_F9  : MostraUltimoLogGravado ;
+          VK_F8  : MostraLogDoDia ;
+          VK_F7  : MostraMonitorDeLOGs ;
+        End // Case Msg.wParam of
+      Else // If GetKeyState(VK_SCROLL) < 0 Then
+      If GetKeyState(VK_CONTROL) < 0 Then
+        Case Msg.wParam of
+          VK_F4 : Begin
+                    {$INCLUDE \Globus\Sistemas\MenuPrincipalFormClose.txt } ;
+                    Application.Terminate ;
+                  End ;
+        End ; // Case Msg.wParam of
+    End ; // If vcUsuarioManagerComSenhaUm Then
+
+    {$IFDEF EmDesenvolvimento}
+    With ContSenhaBgm.vMDTeclas do
+    Begin
+      If {(frmMenuPrincipal.Focused) And}
+         (Not IsEmpty) And
+         (Msg.wParam In [48..57,65..90,97..122]) And
+         (((GetKeyState(VK_SHIFT)   < 0) And (Locate('TECLAS','Shift+' + Chr(Msg.wParam),[]))) Or
+          ((GetKeyState(VK_CONTROL) < 0) And (Locate('TECLAS','Ctrl+'  + Chr(Msg.wParam),[])))) Then
+      Begin
+        If Not ContSenhaBgm.vMDTelas.Locate('NOME',FieldByName('NOME').AsString,[]) Then
+        Begin
+          If Screen.ActiveForm.Name <> 'frmMenuPrincipal' Then
+          Begin
+            ContSenhaBgm.vMDTelas.Append ;
+            ContSenhaBgm.vMDTelas.FieldByName('NOME'   ).AsString := FieldByName('NOME').AsString ;
+            ContSenhaBgm.vMDTelas.FieldByName('CAPTION').AsString := frmMenuPrincipal.vItemDeMenuChamador ;
+            ContSenhaBgm.vMDTelas.Post  ;
+          End ; // If Screen.ActiveForm.Name <> 'frmMenuPrincipal' Then
+
+          If Length(Trim(FieldByName('INDICEMENU').AsString)) = 4 Then
+            MainMenu1.Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,1,2))]
+                     .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,3,2))]
+                     .Click
+          Else
+          If Length(Trim(FieldByName('INDICEMENU').AsString)) = 6 Then
+            MainMenu1.Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,1,2))]
+                     .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,3,2))]
+                     .Items[StrToInt(Copy(FieldByName('INDICEMENU').AsString,5,2))]
+                     .Click ;
+
+          If ContSenhaBgm.vMDTelas.Locate('NOME',FieldByName('NOME').AsString,[]) Then
+          Begin
+            frmMenuPrincipal.vItemDeMenuChamador := ContSenhaBgm.vMDTelas.FieldByName('CAPTION').AsString ;
+            DireitoAoBotoesDaTela(vcUsuario,vcSistema,frmMenuPrincipal.vItemDeMenuChamador);
+
+            ContSenhaBgm.vMDTelas.Delete ;
+          End ; // If ContSenhaBgm.vMDTelas.Locate(...
+        End ; // If Not ContSenhaBgm.vMDTelas.Locate(...
+      End ; // If (Not IsEmpty) And (...
+    End ; // With ContSenhaBgm.vMDTeclas do
+
+    If (Pos(Screen.ActiveForm.Name,'FrmCTREnviarEMailDaTela_frmMenuPrincipal') = 0) And
+       (GetKeyState(VK_SHIFT) < 0) And
+       (Msg.wParam = VK_CONTROL) And
+       (vcEnviarEMailDaTela) Then
+      EnviarEMailDaTela ;
+    {$ENDIF}
+
+    If (vcUsuarioManagerComSenhaUm) And
+       (Msg.wParam = VK_F5) then
+      ChamaTelaparaTraducaoPontual(self,Screen.ActiveForm);
+
+  End;
+
+  { Estando no nosso ambiente (Senha do MANAGER=1), mostra informações da conexão }
+//  If dm.vUsuarioManagerComSenhaUm And (Right(vConcedente, 2) <> ':)') Then
+  If vcUsuarioManagerComSenhaUm And (Right(vConcedente, 2) <> ':)') Then
+    vConcedente := vConcedente + ' (' +
+                   Trim(vServerName) + '/' +
+                   Trim(vUserName)   + '/' +
+                   IIf(vCodigoCliente <> 0,IntToStr(vCodigoCliente) + '/', '') +
+                   UpperCase(vDriveDir)+ ')';
+
+  GlbComum.vTab := Self.vTab;
+                   

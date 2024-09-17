@@ -1,0 +1,1 @@
+c:\windows\system\regsvr32.exe -u oleinserter.dll

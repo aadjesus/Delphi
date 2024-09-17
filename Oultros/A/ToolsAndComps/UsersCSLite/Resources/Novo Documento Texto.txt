@@ -1,0 +1,16 @@
+UsersAdministration_tsAuditory                   Auditoria
+UsersAdministration_tsAudUsers                   Usuários
+UsersAdministration_lblUser                   Usuário
+UsersAdministration_gbxPeriodActivities                    Período de Atividades 
+UsersAdministration_lblFrom                   Desde
+UsersAdministration_lblTo                        Até
+UsersAdministration_DBGridAudUsersColMENU_CAPTION                   MENU_CAPTION
+UsersAdministration_DBGridAudUsersColCOMPUTER_NAME                   COMPUTER_NAME
+UsersAdministration_DBGridAudUsersColSTART_SESSION                   START_SESSION
+UsersAdministration_DBGridAudUsersColEND_SESSION                   END_SESSION
+UsersAdministration_tsAudProgs                   Programas
+UsersAdministration_lblProgram                   Programa
+UsersAdministration_DBGridAudProgsColUSERCS_NAME
+UsersAdministration_DBGridAudProgsColCOMPUTER_NAME
+UsersAdministration_DBGridAudProgsColSTART_SESSION                   START_SESSION
+UsersAdministration_DBGridAudProgsColEND_SESSION

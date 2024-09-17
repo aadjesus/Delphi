@@ -1,0 +1,313 @@
+[arrayd | array declaration (var) | Borland.EditOptions.Pascal]
+array[0..|] of ;
+
+[arrayc | array declaration (const) | Borland.EditOptions.Pascal]
+array[0..|] of = ();
+
+[cases | case statement | Borland.EditOptions.Pascal]
+Case | of
+  : ;
+  : ;
+End ; //
+
+[casee | case statement (with else) | Borland.EditOptions.Pascal]
+Case | of
+  : ;
+  : ;
+Else ;
+End ; //
+
+[classf | class declaration (all parts) | Borland.EditOptions.Pascal]
+T| = class(T)
+private
+
+protected
+
+public
+
+published 
+
+end;
+
+[classd | class declaration (no parts) | Borland.EditOptions.Pascal]
+T| = class(T)
+
+end;
+
+[classc | class declaration (with Create/Destroy overrides) | Borland.EditOptions.Pascal]
+T| = class(T)
+private
+
+protected
+
+public
+  constructor Create; override;
+  destructor Destroy; override;
+published 
+
+end;
+
+[fors | for (no begin/end) | Borland.EditOptions.Pascal]
+For | :=  to  do
+
+[forb | for statement | Borland.EditOptions.Pascal]
+For | :=  to  do
+Begin
+
+End ; //
+
+[function | function declaration | Borland.EditOptions.Pascal]
+function |(): ;
+begin
+
+end;
+
+[ifs | if (no begin/end) | Borland.EditOptions.Pascal]
+if | then
+
+[ifb | if statement | Borland.EditOptions.Pascal]
+If | then
+Begin
+
+End ;
+
+[ife | if then (no begin/end) else (no begin/end) | Borland.EditOptions.Pascal]
+if | then
+
+else
+
+[ifeb | if then else | Borland.EditOptions.Pascal]
+If | then
+Begin
+
+End Else //
+Begin
+
+End ; //
+
+[procedure | procedure declaration | Borland.EditOptions.Pascal]
+procedure |();
+begin
+
+end;
+
+[trye | try except | Borland.EditOptions.Pascal]
+try
+  |
+except
+
+end;
+
+[tryf | try finally | Borland.EditOptions.Pascal]
+try
+  | 
+finally
+
+end;
+
+[trycf | try finally (with Create/Free) | Borland.EditOptions.Pascal]
+|variable := typename.Create; 
+try
+
+finally
+  variable.Free;
+end;
+
+[whileb | while statement | Borland.EditOptions.Pascal]
+While | do
+Begin
+
+End ; //
+
+[whiles | while (no begin) | Borland.EditOptions.Pascal]
+while | do
+
+[withb | with statement | Borland.EditOptions.Pascal]
+With | do
+Begin
+
+End ; //
+
+[withs | with (no begin) | Borland.EditOptions.Pascal]
+with | do
+
+[Esc | Esc | Borland.EditOptions.Pascal]
+If vEsc Or (((GetKeyState(VK_SHIfT) And $1000000) <> 0) And vTAB) Then
+Begin
+  vEsc := False ;
+  If Sender Is TEdit Then
+    TEdit(Sender).Clear
+  Else If Sender Is TDateEdit Then
+    TDateEdit(Sender).Clear
+  Else If Sender Is TTimeEdit Then
+    TTimeEdit(Sender).Clear
+  Else If Sender Is TMaskEdit Then
+    TMaskEdit(Sender).Clear
+  Else If Sender Is TNumEdit Then
+    TNumEdit(Sender).Clear ;
+
+  If Sender = | Then
+    .SetFocus ;
+
+  Exit ; 
+End ; // If vEsc Or (...
+
+
+[AbrirQuery | If AbrirQuery | Borland.EditOptions.Pascal]
+If AbrirQuery(|,'Pesq','','Pesquisando...').Achou Then
+[Locate | Locate | Borland.EditOptions.Pascal]
+Locate(';;',VarArrayOf([,,]),[loCaseInsensitive])
+[Mensagem | Mensagem | Borland.EditOptions.Pascal]
+If Mensagemdlg('Confirma ?',mtConfirmacao,mbSim+mbNao)=mrSim Then
+  Mensagemdlg(|'.',mtInformacao,mbOk) ;
+[ParamByName | ParamByName | Borland.EditOptions.Pascal]
+ParamByName('P_'|).AsInteger  := ;
+ParamByName('P_').AsString   := ;
+ParamByName('P_').AsFloat    := ;
+ParamByName('P_').AsDateTime := ;
+[FieldByName | FieldByName | Borland.EditOptions.Pascal]
+FieldByName(|'').AsInteger  := ;
+FieldByName('').AsString   := ;
+FieldByName('').AsFloat    := ;
+FieldByName('').AsDateTime := ;
+[Bookmark | Guarda a posição do registro | Borland.EditOptions.Pascal]
+vRegAtual : TBookmark ;
+vRegAtual := GetBookmark ;
+GotoBookmark(vRegAtual) ;
+[Disable | Disable/Enable | Borland.EditOptions.Pascal]
+DisableControls ;
+First ;
+EnableControls ;
+
+[Select | Seleciona os dados no banco | Borland.EditOptions.Pascal]
+With QryPesquisa do
+Begin
+  Close ;
+  Sql.Clear ;
+  Sql.Add(' SELECT'+
+          '') ;
+  Sql.Add(' FROM'+
+          '') ;
+  Sql.Add(' WHERE'+
+          '') ;
+  ParamByName('P_').AsInteger  := ;
+  ParamByName('P_').AsString   := ;
+  ParamByName('P_').AsFloat    := ;
+  ParamByName('P_').AsDateTime := ;
+  If Not  AbrirQuery(QryPesquisa
+                    ,'Pesq'
+                    ,'Não foram encontrados dados com os filtros selecionados.'
+                    ,'Consultando ...').Achou Then Exit ;
+End ; // With QryPesquisa do
+
+[Insert | Grava os dados no banco | Borland.EditOptions.Pascal]
+If vcDataBase.InTransaction Then vcDataBase.Rollback ;
+vcDataBase.StartTransaction ;
+
+With QryPesquisa do
+Begin
+  Close ;
+  Sql.Clear ;
+  Sql.Add(' INSERT INTO ' | ) ;
+  Sql.Add('  ('+
+          '  )') ;
+  Sql.Add(' VALUES') ;
+  Sql.Add('  ('+
+          '  )') ;
+  ParamByName('P_').AsInteger  := ;
+  ParamByName('P_').AsString   := ;
+  ParamByName('P_').AsFloat    := ;
+  ParamByName('P_').AsDateTime := ;
+  Try
+    GetSql(QryPesquisa, Nil, False,'Incluindo') ;
+    ExecSQL ;
+  Except on E:EDBEngineError do
+    Begin
+      vcDataBase.Rollback ;
+      If MensagemDLG('Problemas durante inclusão. Deseja ver erro ?', mtConfirmacao, mbSim+mbNao ) = mrSim then
+        MensagemDLG( MostraErrosQuery(E,False), mtErro, mbOK ) ;
+      Exit ;
+    End
+  End ; // Try - Except
+End ; // With QryPesquisa do
+
+vcDataBase.Commit ;
+
+
+
+[Update | Altera os dados no banco | Borland.EditOptions.Pascal]
+If vcDataBase.InTransaction Then vcDataBase.Rollback ;
+vcDataBase.StartTransaction ;
+
+With QryPesquisa do
+Begin
+  Close ;
+  Sql.Clear ;
+  Sql.Add(' UPDATE  SET') ;
+          '') ;
+  Sql.Add(' WHERE'+
+          '') ;
+  ParamByName('P_').AsInteger  := ;
+  ParamByName('P_').AsString   := ;
+  ParamByName('P_').AsFloat    := ;
+  ParamByName('P_').AsDateTime := ;
+  Try
+    GetSql(QryPesquisa, Nil, False,'Alterando');
+    ExecSQL ;
+  Except on E:EDBEngineError do
+    Begin
+      vcDataBase.Rollback ;
+      vProblemaNaGravacao := True;
+      If MensagemDLG('Problemas na exclusão. Deseja ver o erro?', mtConfirmacao, mbSim+mbNao ) = mrSim then
+        MostraErrosQuery(E,True) ;
+      Exit ;
+    End
+  End ; // Try - Except
+End ; // With QryPesquisa do
+
+vcDataBase.Commit ;
+
+[Delete | Deleta os dados no banco | Borland.EditOptions.Pascal]
+If vcDataBase.InTransaction Then vcDataBase.Rollback ;
+vcDataBase.StartTransaction ;
+
+With QryPesquisa do
+Begin
+  Close ;
+  Sql.Clear ;
+  Sql.Add(' DELETE'+
+          '') ;
+  Sql.Add(' WHERE'+
+          '') ;
+  ParamByName('P_CODINTNF').AsInteger := vCodInt ;
+  Try
+    GetSql(QryPesquisa, Nil, False,'Excluindo');
+    ExecSQL ;
+  Except on E:EDBEngineError do
+    Begin
+      vcDataBase.Rollback ;
+      vProblemaNaGravacao := True;
+      If MensagemDLG('Problemas na exclusão. Deseja ver o erro?', mtConfirmacao, mbSim+mbNao ) = mrSim then
+        MostraErrosQuery(E,True) ;
+      Exit ;
+    End
+  End ; // Try - Except
+End ; // With QryPesquisa do
+
+vcDataBase.Commit ;
+
+[Limpar | Limpar os componentes da tela | Borland.EditOptions.Pascal]
+For i := 0 to ComponentCount - 1 do
+Begin
+  If Components[i] Is TEdit        Then TEdit(       Components[i]).Clear ;
+  If Components[i] Is TDateEdit    Then TDateEdit(   Components[i]).Clear ;
+  If Components[i] Is TTimeEdit    Then TTimeEdit(   Components[i]).Clear ;
+  If Components[i] Is TMaskEdit    Then TMaskEdit(   Components[i]).Clear ;
+  If Components[i] Is TNumEdit     Then TNumEdit(    Components[i]).Clear ;
+  If Components[i] Is TMemo        Then TMemo(       Components[i]).Clear ;
+  If Components[i] Is TSpeedButton Then TSpeedButton(Components[i]).Enabled   := False ;
+  If Components[i] Is TCheckBox    Then TCheckBox(   Components[i]).Checked   := False ;
+  If Components[i] Is TRadioGroup  Then TRadioGroup( Components[i]).ItemIndex := 0 ;
+End ; // For i := 0 to ComponentCount - 1 do
+
+

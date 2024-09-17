@@ -1,0 +1,62 @@
+Termos de uso do TUsersCSLite
+-----------------------------
+
+TUsersCSLite Security Component para Delphi
+Copyright (C) 1999 - 2002, Tools&Comps
+Todos os direitos reservados
+web site: http://www.toolsandcomps.com/por
+  e-mail: info@toolsandcomps.com
+
+OBS: Leia atentamente os seguintes termos e condições antes de usar este software.
+
+
+TUsersCSLite Freeware
+---------------------
+
+O TUsersCSLite é uma versão freeware de nosso componente para controle de usuários TUsersCS. O TUsersCSLite é baseado em uma antiga versão do componente (v1.2), a qual proteje apenas itens de menu, mas assim mesmo pode ser muito útil em diversas situações.
+
+Esta versão não inclui os fontes do componente, que estão disponíveis por apenas R$ 199,95 (Developer License), se você realmente precisar deles. Visite nosso web site para obter informações de registro do código fonte do componente TUsersCSLite.
+
+Direito de uso
+--------------
+
+A Tools&Comps concede a você o direito de uso do TUsersCSLite para o desenvolvimento de aplicações freeware e comerciais. 
+
+Isso significa que você pode distribuir livremente suas aplicações compiladas com o TUsersCSLite sem nenhum ônus, além de também poder obter lucro na venda de aplicações que utilizem o TUsersCSLite.
+
+Quem NÃO pode usar o TUsersCSLite
+---------------------------------
+
+O TUsersCSLite na forma Freeware não pode ser usado por nenhuma instituição, órgão, entidade que pertença ou tenha alguma ligação hierárquica com o governo de qualquer país, seja a nível federal, estadual ou municipal, ou em qualquer nível que possa existir não citado neste documento ou que venha a ser criado. Para o uso do componente, é necessário a aquisição de licenças.
+
+
+Direito de distribuição
+-----------------------
+
+A Tools&Comps concede a você o direito de distribuir o TUsersCSLite através de web sites, CDs promocionais, e-mail e outros meios que existam ou que por venturam venha a existir, desde que você não obtenha lucro na distribuição da mídia aonde está armazenada o TUsersCSLite. S você obtém lucros na distribuição, uma autorização para distribuição deve ser requerida.
+
+A Tools&Comps concede a você o direito de distribuir o TUsersCSLite, desde que nenhum arquivo no pacote do TUsersCSLite seja alterado.
+
+Propriedade do TUsersCSLite
+---------------------------
+
+A licença freeware de uso do TUsersCSLite concede a você o direito de usar o software, mas a Tools&Comps permanece como proprietária do software e de todos os arquivos contidos neste pacote.
+
+Ao utilizar o TUsersCSLite em suas aplicações, você concorda que não pode criar outro software
+baseado no TUsersCSLite que compita direta ou indiretamente com o TUsersCS ou outros componentes de segurança de usuários da Tools&Comps.
+
+Responsabilidades 
+-----------------
+
+A Tools&Comps não se responsabiliza por eventuais perdas ou danos diretos, indiretos, 
+casuais ou consequentes, incluindo, mas não limitados a: interrupções ou queda de lucro em 
+suas atividades financeiras, perdas ou danos em dispositivos físicos aonde estejam 
+armazenados o software, problemas físicos, problemas pessoais, entre outros, causados pelo 
+uso incorreto deste software ou de quaisquer arquivos que façam parte do software.
+
+A Tools&Comps pode garantir que este software (TUsersCSLite) funciona apenas nos ambientes 
+os quais o produto Borland Delphi e seus softwares agregados funcionem.
+
+Se estes termos não são aceitáveis por você, então por favor desinstale este software de 
+seu(s) computador(es) imediatamente e permanentemente.
+
